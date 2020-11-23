@@ -2,6 +2,7 @@ package com.example.demo.model;
 
 import java.util.List;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.AllArgsConstructor;
@@ -13,6 +14,7 @@ import lombok.ToString;
 @Data
 @Document(collection = "venta")
 public class Venta {
+	@Id
 	private  String id;
 	    private List<Producto> productos;
 	    private String direccion;
